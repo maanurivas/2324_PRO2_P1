@@ -25,9 +25,9 @@ void new(tUserName name, tUserCategory category, tList *L);
 
 void delete(tUserName name, tList *L);
 
-//void upgrade(tUserName name);
+//void upgrade(tUserName name, tList *L);
 
-//void play(tUserName name, tSongTitle  title);
+void play(tUserName name, tSongTitle  title, tList *L);
 
 //void stats(tList L);
 
@@ -52,6 +52,9 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
         case 'U':
             break;
         case 'P':
+            printf("********************\n");
+            printf("%s %c: user %s song %s\n", commandNumber, command, param1, param2);
+            play(param1,param2, L);
             break;
         case 'S':
             break;
@@ -144,7 +147,7 @@ void delete(tUserName name, tList *L){
     //Buscamos el nombre en la lista
     tPosL p;
     tItemL auxITEM;
-    char *userCategory;
+    char *UserCategory;
     int auxPlays;
 
     p = findItem(name, *L);
@@ -154,12 +157,30 @@ void delete(tUserName name, tList *L){
         auxITEM = getItem(p, *L);
         auxPlays=auxITEM.numPlay;
         if(auxITEM.userCategory){
-            userCategory = "basic";
+            UserCategory = "basic";
         } else{
-            userCategory = "pro";
+            UserCategory = "pro";
         }
         deleteAtPosition(p, L);
-        printf("* Delete: user %s category %s numplays %d\n", name, userCategory, auxPlays);
+        printf("* Delete: user %s category %s numplays %d\n", name, UserCategory, auxPlays);
+    }
+}
+
+
+void play(tUserName name, tSongTitle  title, tList *L){
+    tPosL p;
+    tItemL auxITEM;
+
+    p = findItem(name,*L);
+    if(p==LNULL){//El participante no está en la lista
+        printf("+ Error: Play not possible\n");
+    } else{//Está en la lista
+        auxITEM = getItem(p, *L);
+        auxITEM.numPlay++;
+
+        updateItem(auxITEM, p, L);
+
+        printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);
     }
 }
 
