@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main">
-				<Option output="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/bin/main.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option output="C:/Users/MSI/Desktop/P1/P1/bin/main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 main"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="main/fast">
-				<Option output="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/bin/main.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option output="C:/Users/MSI/Desktop/P1/P1/bin/main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 main/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_lists">
-				<Option output="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/bin/test_lists.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option output="C:/Users/MSI/Desktop/P1/P1/bin/test_lists.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -74,15 +74,15 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_lists"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_lists"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test_lists/fast">
-				<Option output="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/bin/test_lists.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option output="C:/Users/MSI/Desktop/P1/P1/bin/test_lists.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -95,62 +95,62 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2023.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_lists/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_lists/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/MSI/Desktop/P1/P1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/MSI/Desktop/P1/P1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/dynamic_list.c">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/dynamic_list.c">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/dynamic_list.h">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/dynamic_list.h">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/main.c">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/main.c">
 			<Option target="main"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/static_list.c">
-			<Option target="main"/>
-			<Option target="test_lists"/>
-		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/static_list.h">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/static_list.c">
 			<Option target="main"/>
 			<Option target="test_lists"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/test.c">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/static_list.h">
 			<Option target="main"/>
 			<Option target="test_lists"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/types.h">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/test.c">
 			<Option target="main"/>
 			<Option target="test_lists"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/CMakeLists.txt">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/types.h">
+			<Option target="main"/>
+			<Option target="test_lists"/>
+		</Unit>
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/config.cmake">
+		<Unit filename="C:/Users/MSI/Desktop/P1/P1/config.cmake">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

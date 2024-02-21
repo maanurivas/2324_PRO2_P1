@@ -23,13 +23,13 @@
 
 void new(tUserName name, tUserCategory category, tList *L);
 
-void delete(tUserName name);
+void delete(tUserName name, tList *L);
 
-void upgrade(tUserName name);
+//void upgrade(tUserName name);
 
-void play(tUserName name, tSongTitle  title);
+//void play(tUserName name, tSongTitle  title);
 
-void stats(tList L);
+//void stats(tList L);
 
 char *bool_to_char(tUserCategory category);
 
@@ -41,10 +41,13 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
     switch (command) {
         case 'N':
             printf("********************\n");
-            printf("%s %c: user %s category/song %s", commandNumber, command, param1, param2);
+            printf("%s %c: user %s category %s\n", commandNumber, command, param1, param2);
             new(param1, char_to_bool(param2), L);
             break;
         case 'D':
+            printf("********************\n");
+            printf("%s %c: participant %s\n", commandNumber, command, param1);
+            delete(param1, L);
             break;
         case 'U':
             break;
@@ -62,10 +65,8 @@ void readTasks(char *filename) {
     char *commandNumber, *command, *param1, *param2;
     const char delimiters[] = " \n\r";
     char buffer[MAX_BUFFER];
-
     tList L;
     createEmptyList(&L);
-
     f = fopen(filename, "r");
 
     if (f != NULL) {
@@ -108,9 +109,11 @@ char *bool_to_char(tUserCategory category){
     return category ? "basic" : "pro";
 }
 
+
 tUserCategory char_to_bool(char param[]){
     return (strcmp(param, "basic") == 0);
 }
+
 
 void new(tUserName name, tUserCategory category, tList *L){
     tItemL ITEM;
@@ -118,24 +121,49 @@ void new(tUserName name, tUserCategory category, tList *L){
     char* UserCategory;
 
     if(findItem(name, *L) != LNULL){//comprobamos si el participante ya está en la lista
-        printf("Error al realizar New, participante ya dado de alta\n");
+        printf("+ Error: New not possible\n");//Error al realizar New, participante ya dado de alta
     } else{
         strcpy(ITEM.userName,name);//copiamos el dato del nombre en el nombre del nuevo
         ITEM.numPlay = 0;//asignamos su numero de reproducciones a 0
-        ITEM.userCategory=category;//
-        insertado = insertItem(ITEM, LNULL, L);
+        ITEM.userCategory=category;//asignamos su categoria a la variable correspondiente
+        insertado = insertItem(ITEM, LNULL, L);//insertamos el usuario
         if(!insertado){
             printf("+ Error: New not possible\n");
-        } else{
-            if(ITEM.userCategory){
+        } else{//con el usuario ya insertado
+            if(ITEM.userCategory){//comprobamos la categoría del usuario para imprimir correctamente la categoría del usuario
                 UserCategory = "basic";
             } else{
                 UserCategory = "pro";
             }
-            printf("* New: participant %s location %s\n", ITEM.userName, UserCategory);
+            printf("* New: user %s category %s\n", ITEM.userName, UserCategory);//impresion por pantalla
         }
     }
 }
+
+void delete(tUserName name, tList *L){
+    //Buscamos el nombre en la lista
+    tPosL p;
+    tItemL auxITEM;
+    char *userCategory;
+    int auxPlays;
+
+    p = findItem(name, *L);
+    if(p==LNULL){
+        printf("+ Error: Delete not possible\n");
+    } else{
+        auxITEM = getItem(p, *L);
+        auxPlays=auxITEM.numPlay;
+        if(auxITEM.userCategory){
+            userCategory = "basic";
+        } else{
+            userCategory = "pro";
+        }
+        deleteAtPosition(p, L);
+        printf("* Delete: user %s category %s numplays %d\n", name, userCategory, auxPlays);
+    }
+}
+
+
 
 
 

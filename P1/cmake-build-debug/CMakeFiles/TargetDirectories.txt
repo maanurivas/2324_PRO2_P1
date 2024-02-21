@@ -1,4 +1,4 @@
-C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/CMakeFiles/main.dir
-C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/CMakeFiles/test_lists.dir
-C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/MSI/Desktop/Archivos Uni/Primero/PRO2(23-24)/P1/P1/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/MSI/Desktop/practica1/P1/P1/cmake-build-debug/CMakeFiles/main.dir
+C:/Users/MSI/Desktop/practica1/P1/P1/cmake-build-debug/CMakeFiles/test_lists.dir
+C:/Users/MSI/Desktop/practica1/P1/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/MSI/Desktop/practica1/P1/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
