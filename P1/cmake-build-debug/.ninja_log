@@ -1,0 +1,26 @@
+# ninja log v5
+1	54	7302325469194519	CMakeFiles/main.dir/main.c.obj	c94b40893af9d379
+0	51	7301313062670079	CMakeFiles/main.dir/static_list.c.obj	a7b9619d3374188c
+6	62	7301313062796990	CMakeFiles/main.dir/test.c.obj	e5d9040f8f73971a
+9	66	7301313062827337	CMakeFiles/main.dir/dynamic_list.c.obj	1feb811075b96350
+0	77	7302340515321202	build.ninja	ecb18f17a4ee631f
+54	111	7302325469723858	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+6	63	7302340535522869	CMakeFiles/main.dir/static_list.c.obj	385d7caa580be1eb
+2	66	7302340535544632	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+66	121	7302340536071403	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+2	58	7302340846252757	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+58	109	7302340846730756	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+2	54	7302341570985118	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+54	112	7302341571544721	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+1	65	7302355207692013	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+65	127	7302355208287766	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+2	64	7302369214350062	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+64	127	7302369214959870	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+2	55	7302369472038150	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+55	106	7302369472519096	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+1	205	7302387937917703	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+205	385	7302387939687667	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+2	54	7302388034920827	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+54	100	7302388035370553	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
+1	56	7302388137880418	CMakeFiles/main.dir/main.c.obj	3031606bef684912
+56	120	7302388138482063	C:/Users/MSI/Desktop/practica1/P1/P1/bin/main.exe	399d9b022bcd031f
