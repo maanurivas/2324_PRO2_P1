@@ -144,25 +144,25 @@ void new(tUserName name, tUserCategory category, tList *L){
 }
 
 void delete(tUserName name, tList *L){
-    //Buscamos el nombre en la lista
+
     tPosL p;
     tItemL auxITEM;
     char *UserCategory;
     int auxPlays;
 
-    p = findItem(name, *L);
-    if(p==LNULL){
+    p = findItem(name, *L);//Buscamos el nombre
+    if(p==LNULL){//No esta en la lista o está vacía
         printf("+ Error: Delete not possible\n");
-    } else{
-        auxITEM = getItem(p, *L);
+    } else{//Está en la lista
+        auxITEM = getItem(p, *L);//Obtenemos el user
         auxPlays=auxITEM.numPlay;
         if(auxITEM.userCategory){
             UserCategory = "basic";
         } else{
             UserCategory = "pro";
         }
-        deleteAtPosition(p, L);
-        printf("* Delete: user %s category %s numplays %d\n", name, UserCategory, auxPlays);
+        deleteAtPosition(p, L);//lo eliminamos
+        printf("* Delete: user %s category %s numplays %d\n", name, UserCategory, auxPlays);//imprimimos lo solicitado
     }
 }
 
@@ -171,16 +171,16 @@ void play(tUserName name, tSongTitle  title, tList *L){
     tPosL p;
     tItemL auxITEM;
 
-    p = findItem(name,*L);
+    p = findItem(name,*L);//Buscamos el usuario
     if(p==LNULL){//El participante no está en la lista
         printf("+ Error: Play not possible\n");
     } else{//Está en la lista
-        auxITEM = getItem(p, *L);
-        auxITEM.numPlay++;
+        auxITEM = getItem(p, *L);//obtenemos el usuario
+        auxITEM.numPlay++;//sumamos 1 en las reproducciones
 
-        updateItem(auxITEM, p, L);
+        updateItem(auxITEM, p, L);//actualizamos el numero de reproducciones
 
-        printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);
+        printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);//imprimimos lo solicitado
     }
 }
 
