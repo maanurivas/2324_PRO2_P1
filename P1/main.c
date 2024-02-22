@@ -25,7 +25,7 @@ void new(tUserName name, tUserCategory category, tList *L);
 
 void delete(tUserName name, tList *L);
 
-//void upgrade(tUserName name, tList *L);
+void upgrade(tUserName name, tList *L);
 
 void play(tUserName name, tSongTitle  title, tList *L);
 
@@ -50,6 +50,9 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             delete(param1, L);
             break;
         case 'U':
+            printf("********************\n");
+            printf("%s %c: user %s category %s\n", commandNumber, command, param1, param2);
+            upgrade(param1, L);
             break;
         case 'P':
             printf("********************\n");
@@ -144,7 +147,6 @@ void new(tUserName name, tUserCategory category, tList *L){
 }
 
 void delete(tUserName name, tList *L){
-
     tPosL p;
     tItemL auxITEM;
     char *UserCategory;
@@ -166,6 +168,26 @@ void delete(tUserName name, tList *L){
     }
 }
 
+void upgrade(tUserName name, tList *L){
+    tPosL p;
+    tItemL auxITEM;
+    char *UserCategory;
+
+    p = findItem(name, *L);
+    if(p==LNULL){
+        printf("+ Error: Upgrade not possible\n");
+    } else{
+        auxITEM = getItem(p, *L);
+        if (auxITEM.userCategory == basic) {
+            printf("* Upgrade: user %s category pro\n", name);
+            auxITEM.userCategory = pro; // Actualiza la categoría a "pro"
+            updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
+        } else{
+            printf("+ Error: Upgrade not possible\n");
+        }
+    }
+
+}
 
 void play(tUserName name, tSongTitle  title, tList *L){
     tPosL p;
@@ -183,6 +205,8 @@ void play(tUserName name, tSongTitle  title, tList *L){
         printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);//imprimimos lo solicitado
     }
 }
+
+
 
 
 
