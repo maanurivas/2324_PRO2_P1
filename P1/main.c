@@ -51,7 +51,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             break;
         case 'U':
             printf("********************\n");
-            printf("%s %c: user %s category %s\n", commandNumber, command, param1, param2);
+            printf("%s %c: user %s\n", commandNumber, command, param1);
             upgrade(param1, L);
             break;
         case 'P':
@@ -171,14 +171,13 @@ void delete(tUserName name, tList *L){
 void upgrade(tUserName name, tList *L){
     tPosL p;
     tItemL auxITEM;
-    char *UserCategory;
 
     p = findItem(name, *L);
     if(p==LNULL){
         printf("+ Error: Upgrade not possible\n");
     } else{
         auxITEM = getItem(p, *L);
-        if (auxITEM.userCategory == basic) {
+        if (bool_to_char(auxITEM.userCategory)!="pro") {
             printf("* Upgrade: user %s category pro\n", name);
             auxITEM.userCategory = pro; // Actualiza la categoría a "pro"
             updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
@@ -186,8 +185,8 @@ void upgrade(tUserName name, tList *L){
             printf("+ Error: Upgrade not possible\n");
         }
     }
-
 }
+
 
 void play(tUserName name, tSongTitle  title, tList *L){
     tPosL p;
