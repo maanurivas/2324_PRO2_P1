@@ -29,7 +29,7 @@ void upgrade(tUserName name, tList *L);
 
 void play(tUserName name, tSongTitle  title, tList *L);
 
-//void stats(tList L);
+void stats(tList *L);
 
 char *bool_to_char(tUserCategory category);
 
@@ -124,7 +124,7 @@ tUserCategory char_to_bool(char param[]){
 void new(tUserName name, tUserCategory category, tList *L){
     tItemL ITEM;
     bool insertado;
-    char* UserCategory;
+    char* UserCategory;//variables auxiliares para trabajar sobre ellas
 
     if(findItem(name, *L) != LNULL){//comprobamos si el participante ya está en la lista
         printf("+ Error: New not possible\n");//Error al realizar New, participante ya dado de alta
@@ -150,7 +150,7 @@ void delete(tUserName name, tList *L){
     tPosL p;
     tItemL auxITEM;
     char *UserCategory;
-    int auxPlays;
+    int auxPlays;//variables auxiliares para trabajar sobre ellas
 
     p = findItem(name, *L);//Buscamos el nombre
     if(p==LNULL){//No esta en la lista o está vacía
@@ -158,7 +158,7 @@ void delete(tUserName name, tList *L){
     } else{//Está en la lista
         auxITEM = getItem(p, *L);//Obtenemos el user
         auxPlays=auxITEM.numPlay;
-        if(auxITEM.userCategory){
+        if(auxITEM.userCategory){//comprobamos la categoria del usuario
             UserCategory = "basic";
         } else{
             UserCategory = "pro";
@@ -170,18 +170,18 @@ void delete(tUserName name, tList *L){
 
 void upgrade(tUserName name, tList *L){
     tPosL p;
-    tItemL auxITEM;
+    tItemL auxITEM;//variables auxiliares para trabajar sobre ellas
 
-    p = findItem(name, *L);
-    if(p==LNULL){
+    p = findItem(name, *L);//buscamos el item
+    if(p==LNULL){//comprobamos si está en la lista
         printf("+ Error: Upgrade not possible\n");
     } else{
-        auxITEM = getItem(p, *L);
-        if (bool_to_char(auxITEM.userCategory)!="pro") {
-            printf("* Upgrade: user %s category pro\n", name);
+        auxITEM = getItem(p, *L);//está en la lista
+        if (bool_to_char(auxITEM.userCategory)!="pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
             auxITEM.userCategory = pro; // Actualiza la categoría a "pro"
             updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
-        } else{
+            printf("* Upgrade: user %s category pro\n", name);//Imprimimos por pantalla
+        } else{//caso en el que la categoría ya es pro
             printf("+ Error: Upgrade not possible\n");
         }
     }
@@ -190,7 +190,7 @@ void upgrade(tUserName name, tList *L){
 
 void play(tUserName name, tSongTitle  title, tList *L){
     tPosL p;
-    tItemL auxITEM;
+    tItemL auxITEM;//variables auxiliares para trabajar sobre ellas
 
     p = findItem(name,*L);//Buscamos el usuario
     if(p==LNULL){//El participante no está en la lista
@@ -202,6 +202,33 @@ void play(tUserName name, tSongTitle  title, tList *L){
         updateItem(auxITEM, p, L);//actualizamos el numero de reproducciones
 
         printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);//imprimimos lo solicitado
+    }
+}
+
+void stats(tList *L){
+    tPosL p;
+    tItemL auxITEM;
+    char *UserCategory;
+    int cntBasic, cntPro, playBasic, playPro;
+    float mediaBasic, mediaPro;
+    if(isEmptyList(*L)){
+        printf("+ Error: Stats not possible\n");
+    } else{
+        for(p = first(*L); p != LNULL; p = next(p, *L)){
+            auxITEM = getItem(p, *L);
+            if(auxITEM.userCategory){
+                UserCategory = "basic";
+                cntBasic++;
+                playBasic+=auxITEM.numPlay;
+            } else{
+                UserCategory = "pro";
+                cntPro++;
+                playPro+=auxITEM.numPlay;
+            }
+            printf("User %s category %s numplays %d", auxITEM.userName, bool_to_char(auxITEM.userCategory),auxITEM.numPlay);
+
+
+        }
     }
 }
 
