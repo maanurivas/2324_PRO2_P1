@@ -60,6 +60,9 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             play(param1,param2, L);
             break;
         case 'S':
+            printf("********************\n");
+            printf("%s %c:\n", commandNumber, command);
+            stats(L);
             break;
         default:
             break;
@@ -209,26 +212,29 @@ void stats(tList *L){
     tPosL p;
     tItemL auxITEM;
     char *UserCategory;
-    int cntBasic, cntPro, playBasic, playPro;
-    float mediaBasic, mediaPro;
+    int cntBasic=0, cntPro=0, playBasic=0, playPro=0;
+    float mediaBasic=0., mediaPro=0.;
     if(isEmptyList(*L)){
         printf("+ Error: Stats not possible\n");
     } else{
         for(p = first(*L); p != LNULL; p = next(p, *L)){
             auxITEM = getItem(p, *L);
-            if(auxITEM.userCategory){
+            if(bool_to_char(auxITEM.userCategory)!="pro"){
                 UserCategory = "basic";
                 cntBasic++;
-                playBasic+=auxITEM.numPlay;
+                //playBasic+=auxITEM.numPlay;
             } else{
                 UserCategory = "pro";
                 cntPro++;
-                playPro+=auxITEM.numPlay;
+                //playPro+=auxITEM.numPlay;
             }
-            printf("User %s category %s numplays %d", auxITEM.userName, bool_to_char(auxITEM.userCategory),auxITEM.numPlay);
-
-
+            printf("User %s category %s numplays %d\n", auxITEM.userName, UserCategory, auxITEM.numPlay);
         }
+        //mediaBasic=playBasic/cntBasic;
+        //mediaPro=playPro/cntPro;
+        printf("Category  Users  Plays  Average\n");
+        printf("Basic     %5d %6d %8.2f\n", cntBasic,playBasic,mediaBasic);
+        printf("Pro       %5d %6d %8.2f\n", cntPro,playPro,mediaPro);
     }
 }
 
