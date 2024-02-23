@@ -179,13 +179,13 @@ void upgrade(tUserName name, tList *L){
     if(p==LNULL){//comprobamos si está en la lista
         printf("+ Error: Upgrade not possible\n");
     } else{
-        auxITEM = getItem(p, *L);//está en la lista
-        if (bool_to_char(auxITEM.userCategory)!="pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
-            auxITEM.userCategory = pro; // Pasamos la categoría a "pro"
+        auxITEM = getItem(p, *L);//caso en el que la categoría ya es pro
+        if (bool_to_char(auxITEM.userCategory)=="pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
+            printf("+ Error: Upgrade not possible\n");
+        } else{//está en la lista
+            auxITEM.userCategory= char_to_bool("pro"); // Pasamos la categoría a "pro"
             updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
             printf("* Upgrade: user %s category %s\n", name, bool_to_char(auxITEM.userCategory));//Imprimimos por pantalla
-        } else{//caso en el que la categoría ya es pro
-            printf("+ Error: Upgrade not possible\n");
         }
     }
 }
@@ -211,7 +211,7 @@ void stats(tList *L){
     tItemL auxITEM;
     char *UserCategory;
     int cntBasic=0, cntPro=0, playBasic=0, playPro=0;
-    float mediaBasic=0., mediaPro=0.;
+    float mediaBasic=0.0f, mediaPro=0.0f;
     if(isEmptyList(*L)){
         printf("+ Error: Stats not possible\n");
     } else{
@@ -219,17 +219,26 @@ void stats(tList *L){
             auxITEM = getItem(p, *L);
             if(bool_to_char(auxITEM.userCategory)!="pro"){
                 UserCategory = "basic";
-                cntBasic++;
-                //playBasic+=auxITEM.numPlay;
+                cntBasic=cntBasic+1;
+                playBasic+=auxITEM.numPlay;
             } else{
                 UserCategory = "pro";
-                cntPro++;
-                //playPro+=auxITEM.numPlay;
+                cntPro=cntPro+1;
+                playPro+=auxITEM.numPlay;
             }
             printf("User %s category %s numplays %d\n", auxITEM.userName, UserCategory, auxITEM.numPlay);
         }
-        //mediaBasic=playBasic/cntBasic;
-        //mediaPro=playPro/cntPro;
+        if((playBasic==0)||(cntBasic==0)){
+            mediaBasic = 0.0f;
+        } else{
+            mediaBasic= (float) playBasic/cntBasic;
+        }
+        if((playPro==0)||(cntPro==0)){
+            mediaPro = 0.0f;
+        } else{
+            mediaPro= (float) playPro/cntPro;
+        }
+
         printf("Category  Users  Plays  Average\n");
         printf("Basic     %5d %6d %8.2f\n", cntBasic,playBasic,mediaBasic);
         printf("Pro       %5d %6d %8.2f\n", cntPro,playPro,mediaPro);
