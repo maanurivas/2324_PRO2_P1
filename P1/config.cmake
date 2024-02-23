@@ -3,4 +3,4 @@
 set(impl STATIC)
 
 #Choose the input file for main (new.txt, play.txt, upgrade.txt, delete1.txt...)
-set(input new.txt)
+set(input upgrade.txt)

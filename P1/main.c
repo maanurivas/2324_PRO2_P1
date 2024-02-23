@@ -46,7 +46,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
             break;
         case 'D':
             printf("********************\n");
-            printf("%s %c: participant %s\n", commandNumber, command, param1);
+            printf("%s %c: user %s\n", commandNumber, command, param1);
             delete(param1, L);
             break;
         case 'U':
@@ -181,9 +181,9 @@ void upgrade(tUserName name, tList *L){
     } else{
         auxITEM = getItem(p, *L);//está en la lista
         if (bool_to_char(auxITEM.userCategory)!="pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
-            auxITEM.userCategory = pro; // Actualiza la categoría a "pro"
+            auxITEM.userCategory = pro; // Pasamos la categoría a "pro"
             updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
-            printf("* Upgrade: user %s category pro\n", name);//Imprimimos por pantalla
+            printf("* Upgrade: user %s category %s\n", name, bool_to_char(auxITEM.userCategory));//Imprimimos por pantalla
         } else{//caso en el que la categoría ya es pro
             printf("+ Error: Upgrade not possible\n");
         }
@@ -201,9 +201,7 @@ void play(tUserName name, tSongTitle  title, tList *L){
     } else{//Está en la lista
         auxITEM = getItem(p, *L);//obtenemos el usuario
         auxITEM.numPlay++;//sumamos 1 en las reproducciones
-
         updateItem(auxITEM, p, L);//actualizamos el numero de reproducciones
-
         printf("* Play: user %s plays song %s numplays %d\n",name,title,auxITEM.numPlay);//imprimimos lo solicitado
     }
 }
