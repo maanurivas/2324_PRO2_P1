@@ -22,19 +22,74 @@
 #endif
 
 void new(tUserName name, tUserCategory category, tList *L);
+/*
+Objetivo: Crea un nuevo usuario en la lista de usuarios de la plataforma MUSFIC, con su nombre,
+          contador de reproducciones a cero y categoría.
+Entrada: Un nombre(tipo tUserName), una categoría (tipo tUserCategory) y la lista (tListL).
+Salida:  La confirmación de que se ha creado correctamente el nuevo elemento, o en su defecto,
+         la confirmación de que no se ha podido crear o que el usuario no existe.
+Precondiciones: -
+Postcondiciones: -
+*/
 
 void delete(tUserName name, tList *L);
+/*
+Objetivo: Eliminar a un usuario de la lista, eliminando también todas sus reproducciones.
+Entrada:  Un nombre de usuario (tipo tUserName) y la lista (tipo tListL).
+Salida:   La confirmación de que se ha eliminado al usuario introducido, o en su defecto,
+          (si el usuario no estaba en la lista) un error de eliminacion.
+Precondiciones: -
+Postcondiciones: -
+*/
 
 void upgrade(tUserName name, tList *L);
+/*
+ * Objetivo:  Cambiar la categoria del participante, de basic a pro.
+ * Entrada:   Un nombre de usuario (tipo tUserName) y la lista (tipo tListL).
+ * Salida:    La confirmación de que se ha cambiado la categoría, o en su defecto,
+ *            La confirmación de que no se ha encontrado el usuario en la lista.
+ * Precondiciones: -
+ * Postcondiciones: -
+ */
+
 
 void play(tUserName name, tSongTitle  title, tList *L);
+/*
+Objetivo:  Añadir una reproduccion del participante a la canción indicada, además de añadirlo al numero total de reproducciones y tenerlo en cuenta para la media de reproducciones de cada categoria.
+Entrada:   Un nombre de usuario (tipo tUserName), un nombre de cancion (tipo tSongTitle) y la lista(tipo tListL).
+Salida:    La confirmación de que se ha reproducido la canción, o en su defecto,
+           la confirmación de que no se ha encontrado el usuario en la lista.
+Precondiciones: -
+Postcondiciones: -
+*/
 
 void stats(tList *L);
+/*
+Objetivo: Muestra todos los usuarios de la lista con su categoría correspondiente y sus reproducciones,
+          su número de reproducciones y media de reproducciones estos dos ultimos en función de la categoría.
+Entrada:  Una lista (tipo tListL)
+Salida:   Todos los datos que se requiere mostrar, o error en caso de que no se puedan mostrar estadisticas.
+Precondiciones: -
+Postcondiciones: -
+*/
 
-char *bool_to_char(tUserCategory category);
+char *UserCategory_to_char(tUserCategory category);
+/*
+Objetivo: Convierte el parametro introducido al programa (basic/pro) a tipo char
+Entrada: Un elemento tUserCategory
+Salida: Devuelve true en caso de que el parametro introducido sea "basic" o false en caso contrario
+Precondiciones: Recibe basic o pro
+Postcondiciones: -
+*/
 
-tUserCategory char_to_bool(char param[]);
-
+tUserCategory char_to_UserCategory(char param[]);
+/*
+Objetivo: Convierte el parametro introducido al programa ("basic"/"pro") a tipo tUserCategory
+Entrada: Un elemento char
+Salida: Devuelve true en caso de que el parametro introducido sea "basic" o false en caso contrario
+Precondiciones: Recibe "basic" o "pro"
+Postcondiciones: -
+*/
 
 void processCommand(char *commandNumber, char command, char *param1, char *param2, tList *L) {
 
@@ -42,7 +97,7 @@ void processCommand(char *commandNumber, char command, char *param1, char *param
         case 'N':
             printf("********************\n");
             printf("%s %c: user %s category %s\n", commandNumber, command, param1, param2);
-            new(param1, char_to_bool(param2), L);
+            new(param1, char_to_UserCategory(param2), L);
             break;
         case 'D':
             printf("********************\n");
@@ -114,12 +169,12 @@ int main(int nargs, char **args) {
     return 0;
 }
 
-char *bool_to_char(tUserCategory category){
+char *UserCategory_to_char(tUserCategory category){
     return category ? "basic" : "pro";
 }
 
 
-tUserCategory char_to_bool(char param[]){
+tUserCategory char_to_UserCategory(char param[]){
     return (strcmp(param, "basic") == 0);
 }
 
@@ -180,12 +235,12 @@ void upgrade(tUserName name, tList *L){
         printf("+ Error: Upgrade not possible\n");
     } else{
         auxITEM = getItem(p, *L);//caso en el que la categoría ya es pro
-        if (bool_to_char(auxITEM.userCategory)=="pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
+        if (UserCategory_to_char(auxITEM.userCategory) == "pro") {//comprobamos que su categoría no es pro usando una función auxiliar para pasar a char los userCategory
             printf("+ Error: Upgrade not possible\n");
         } else{//está en la lista
-            auxITEM.userCategory= char_to_bool("pro"); // Pasamos la categoría a "pro"
+            auxITEM.userCategory= char_to_UserCategory("pro"); // Pasamos la categoría a "pro"
             updateItem(auxITEM, p, L); // Actualiza el usuario en la lista
-            printf("* Upgrade: user %s category %s\n", name, bool_to_char(auxITEM.userCategory));//Imprimimos por pantalla
+            printf("* Upgrade: user %s category %s\n", name, UserCategory_to_char(auxITEM.userCategory));//Imprimimos por pantalla
         }
     }
 }
@@ -217,7 +272,7 @@ void stats(tList *L){
     } else{
         for(p = first(*L); p != LNULL; p = next(p, *L)){
             auxITEM = getItem(p, *L);
-            if(bool_to_char(auxITEM.userCategory)!="pro"){
+            if(UserCategory_to_char(auxITEM.userCategory) != "pro"){
                 UserCategory = "basic";
                 cntBasic=cntBasic+1;
                 playBasic+=auxITEM.numPlay;
